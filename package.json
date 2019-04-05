@@ -1,0 +1,82 @@
+{
+  "name": "libp2p-kad-dht-viz",
+  "version": "0.0.0",
+  "description": "Visualizer of the Kad-DHT for libp2p",
+  "main": "src/index.js",
+  "scripts": {
+    "lint": "aegir lint",
+    "test": "aegir test -t node",
+    "test:node": "aegir test -t node",
+    "build": "aegir build",
+    "docs": "aegir docs",
+    "release": "aegir release --docs -t node",
+    "release-minor": "aegir release --type minor --docs -t node",
+    "release-major": "aegir release --type major --docs -t node",
+    "coverage": "aegir coverage",
+    "coverage-publish": "aegir-coverage publish",
+    "watch": "watchify -v --debug src/javascripts -o src/sim.js"
+  },
+  "pre-push": [
+    "lint",
+    "test"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/libp2p/js-libp2p-kad-dht-viz.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/libp2p/js-libp2p-kad-dht-viz/issues"
+  },
+  "engines": {
+    "node": ">=6.0.0",
+    "npm": ">=3.0.0"
+  },
+  "homepage": "https://github.com/libp2p/js-libp2p-kad-dht-viz",
+  "dependencies": {
+    "@nodeutils/defaults-deep": "^1.1.0",
+    "async-iterator-to-pull-stream": "^1.2.1",
+    "base32.js": "~0.1.0",
+    "chai-checkmark": "^1.0.1",
+    "cids": "~0.5.7",
+    "debug": "^4.1.1",
+    "err-code": "^1.1.2",
+    "hashlru": "^2.3.0",
+    "heap": "~0.2.6",
+    "interface-datastore": "ipfs/interface-datastore#refactor/async-iterators",
+    "ipfs": "^0.34.4",
+    "k-bucket": "^5.0.0",
+    "libp2p-crypto": "file:../js-libp2p-crypto",
+    "libp2p-kad-dht": "file:../js-libp2p-crypto",
+    "libp2p-record": "file:../js-libp2p-record",
+    "multihashes": "~0.4.14",
+    "multihashing-async": "file:../js-multihashing-async",
+    "p-queue": "^3.1.0",
+    "peer-id": "file:../js-peer-id",
+    "peer-info": "file:../js-peer-info",
+    "priorityqueue": "~0.2.1",
+    "protons": "^1.0.1",
+    "pull-length-prefixed": "^1.3.1",
+    "pull-stream": "^3.6.9",
+    "streaming-iterables": "^3.5.0",
+    "varint": "^5.0.0",
+    "xor-distance": "^1.0.0"
+  },
+  "devDependencies": {
+    "aegir": "^18.1.1",
+    "chai": "^4.2.0",
+    "d3": "^5.9.2",
+    "datastore-level": "ipfs/js-datastore-level#refactor/async-iterators",
+    "dirty-chai": "^2.0.1",
+    "interface-connection": "~0.3.3",
+    "libp2p-mplex": "~0.8.4",
+    "libp2p-switch": "~0.41.5",
+    "libp2p-tcp": "~0.13.0",
+    "lodash": "^4.17.11",
+    "lodash.random": "^3.2.0",
+    "lodash.range": "^3.2.0",
+    "peer-book": "~0.9.1",
+    "sinon": "^7.2.4",
+    "watchify": "^3.11.1"
+  }
+}

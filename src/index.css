@@ -1,0 +1,196 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  color: #444;
+  display: flex;
+  flex-direction: column;
+}
+button {
+  font-size: 0.7em;
+}
+
+header {
+  color: steelblue;
+  padding: 0.5em 1em;
+  text-align: center;
+  width: 100%;
+}
+.container {
+  padding: 0 0.5em 0.5em 0.5em;
+  display: flex;
+  flex-flow: column;
+  flex: 1 1 auto;
+}
+.content {
+  height: 100%;
+}
+table td {
+  vertical-align: top;
+}
+.canvas-container {
+  width: 100%;
+  position: relative;
+}
+.canvas-container #canvas-scrubber {
+  height: 10px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: #efefef;
+}
+.canvas-container #canvas-scrubber .time-bar {
+  fill: rgba(0, 0, 0, 0.2);
+}
+.canvas-container #canvas-scrubber .bar line {
+  stroke: #f00;
+}
+.canvas-container .info {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  width: 10em;
+  bottom: 0.5em;
+  overflow: auto;
+}
+.canvas-container .info svg {
+  width: 1.25em;
+  height: 1.25em;
+  vertical-align: top;
+}
+.canvas-container .info .item {
+  font-size: 0.75em;
+  padding: 0.25em 0;
+}
+.canvas-container .info .time {
+  padding-left: 0.5em;
+  font-size: 0.75em;
+  opacity: 0.8;
+}
+.controls {
+  min-width: 10em;
+}
+.controls .control {
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+.controls .control .option {
+  padding: 0.25em;
+}
+.controls .control label {
+  font-size: 0.5em;
+}
+.controls .control label.row {
+  display: block;
+  word-break: break-word;
+}
+.controls .control label.title {
+  display: block;
+  padding: 0.25em;
+  font-size: 0.8em;
+}
+.controls .recorder {
+  font-size: 0.8em;
+  display: flex;
+  flex-flow: column;
+  flex: 1 1 auto;
+  overflow-y: auto;  
+  overflow: auto;
+  height: 100%;
+}
+.controls .recorder .title {
+  padding: 0.5em;
+}
+.controls .recorder .run {
+  cursor: pointer;
+  display: block;
+  padding: 0.5em;
+  position: relative;
+}
+.controls .recorder .run.playing {
+  background-color: #eeeeff;
+}
+.controls .recorder .run.playing:hover {
+  background-image: url('./images/baseline-not_interested-24px.svg');
+  background-size: 1em;
+  background-repeat: no-repeat;
+  background-position: 9.5em;
+}
+.controls .recorder .run .close {
+  position: absolute;
+  top: 0.25em;
+  right: 0.25em;
+  display: none;
+}
+.controls .recorder .run:hover .close {
+  display: block;
+}
+.controls .recorder .run .count {
+  display: inline-block;
+  margin-right: 1em;
+  color: #444;
+}
+.controls .recorder .run .duration {
+  display: inline-block;
+  color: #aaa;
+}
+.controls #show-live-button {
+  display: none;
+}
+.playing .controls #show-live-button {
+  display: inline-block;
+}
+.playing .controls #record-controls {
+  display: none;
+}
+.controls #record-controls #record-stop {
+  display: none;
+}
+.controls #record-controls #record-timer {
+  display: none;
+  font-size: 0.8em;
+  font-family: courier-new;
+  opacity: 0.8;
+}
+.controls #record-controls.recording #record-start {
+  display: none;
+}
+.controls #record-controls.recording #record-stop {
+  display: inline-block;
+}
+.controls #record-controls.recording #record-timer {
+  display: inline-block;
+}
+.run-paths .run {
+  margin: 0.5em 0;
+  font-size: 0.8em;  
+}
+.run-paths .run .path {
+  margin: 0.5em 0;
+}
+.run-paths .run .path .peer {
+  font-family: "courier new"
+}
+#progress-clock {
+  position: absolute;
+  padding: 0.5em;
+  opacity: 0.8;
+  right: 0;
+  bottom: 10px;
+  font-size: 0.8em;  
+}
+#status {
+  position: absolute;
+  bottom: 0;
+  font-size: 0.8em;
+  opacity: 0.8;
+  padding: 0.5em;  
+}
+#canvas {
+  width: 100%;
+  height: 100%;
+  border: 1px dotted #eee;
+}

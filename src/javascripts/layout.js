@@ -1,6 +1,6 @@
 'use strict'
 
-const BigNumber = require('../../node_modules/bignumber.js/bignumber.js')
+const BigNumber = require('bignumber.js')
 const max = BigNumber('0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF')
 
 const DefaultOptions = {
